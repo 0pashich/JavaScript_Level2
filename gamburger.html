@@ -36,7 +36,7 @@
             let price = 0;
             price += this.ingridientsList.find(item => item.name == this.size).price;
             price += this.ingridientsList.find(item => item.name == this.stuffing).price;
-            this.topping.forEach(topping => { price = this.ingridientsList.find(item => item.name == topping).price; });
+            this.topping.forEach(topping => { price += this.ingridientsList.find(item => item.name == topping).price; });
             return price;
 
         }    // Узнать цену 
@@ -52,6 +52,7 @@
     burger.addTopping('spice');
     burger.addTopping('mayonnaise');
     burger.addTopping('spice');
+    burger.removeTopping('spice');
     console.log(burger.getToppings());
     console.log(burger.getSize());
     console.log(burger.getStuffing());
