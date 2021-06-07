@@ -1,0 +1,63 @@
+<script>
+    class Hamburger {
+        constructor(size, stuffing) {
+            this.size = size;
+            this.stuffing = stuffing;
+            this.topping = [];
+        }
+
+        ingridientsList = [
+            { id: 1, type: 'burger', name: 'small', price: 50, calorie: 20 },
+            { id: 2, type: 'burger', name: 'big', price: 100, calorie: 40 },
+            { id: 3, type: 'stuffing', name: 'cheese', price: 10, calorie: 20 },
+            { id: 4, type: 'stuffing', name: 'salad', price: 20, calorie: 5 },
+            { id: 5, type: 'stuffing', name: 'potato', price: 15, calorie: 10 },
+            { id: 6, type: 'topping', name: 'spice', price: 15, calorie: 0 },
+            { id: 7, type: 'topping', name: 'mayonnaise', price: 20, calorie: 5 }
+        ];
+
+
+        addTopping(topping) {
+            if (!this.topping.includes(topping)) { this.topping.push(topping) };
+        } // Добавить добавку 
+        removeTopping(topping) {
+            this.topping.splice(this.topping.indexOf(topping), 1);
+        } // Убрать добавку
+        getToppings() {
+            return this.topping.join(" ");
+        }  // Получить список добавок
+        getSize() {
+            return this.size;
+        }  // Узнать размер гамбургера 
+        getStuffing() {
+            return this.stuffing;
+        }   // Узнать начинку гамбургера
+        calculatePrice() {
+            let price = 0;
+            price += this.ingridientsList.find(item => item.name == this.size).price;
+            price += this.ingridientsList.find(item => item.name == this.stuffing).price;
+            this.topping.forEach(topping => { price += this.ingridientsList.find(item => item.name == topping).price; });
+            return price;
+
+        }    // Узнать цену 
+        calculateCalories() {
+            let calories = this.ingridientsList.find(item => item.name == this.size).calorie;
+            calories += this.ingridientsList.find(item => item.name == this.stuffing).calorie;
+            this.topping.forEach(topping => calories += this.ingridientsList.find(item => item.name == topping).calorie);
+            return calories;
+        }   // Узнать калорийность
+    }
+
+    let burger = new Hamburger('small', 'cheese');
+    burger.addTopping('spice');
+    burger.addTopping('mayonnaise');
+    burger.addTopping('spice');
+    burger.removeTopping('spice');
+    console.log(burger.getToppings());
+    console.log(burger.getSize());
+    console.log(burger.getStuffing());
+    console.log(burger.calculatePrice());
+    console.log(burger.calculateCalories());
+    console.log(burger);
+
+</script>
