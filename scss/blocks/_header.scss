@@ -1,0 +1,24 @@
+.header {
+    background-color: $dark-blue;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+
+    &__cart {
+        position: relative;
+        background-color: transparent;
+        border: 1px solid white;
+        color: $alabaster;
+        margin: 0 33px 0 0;
+        min-height: 60px;
+        transition: border 0.3s;
+    }
+
+    &__cart:hover,
+    &__cart:focus {
+        border: 1px solid $dark-pink;
+    }
+    &__cart-text {
+        display: block;
+    }
+}
