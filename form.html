@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        <input type="text" name="name" id="form-name" placeholder="Имя">
+        <input type="tel" name="tel" id="form-tel" placeholder="Телефон">
+        <input type="email" name="mail" id="form-mail" placeholder="mail">
+        <input type="text" name="text" id="form-text" placeholder="text">
+        <button type="submit">Отправить</button>
+    </form>
+    <script>
+        'use strict';
+        document.querySelector('form').addEventListener('submit', event => {
+            event.target.querySelectorAll('input').forEach(input => {
+                switch (input.name) {
+                    case 'name':
+                        if (!input.value.match(/^[a-zа-я]{1,}/iu)) {
+                            input.style.borderColor = 'red';
+                            event.preventDefault();
+                        } else {
+                            input.style.borderColor = 'green';
+                        }
+                        break;
+                    case 'tel':
+                        if (!input.value.match(/^\+\d+\(\d{3}\)\d{3}\-\d{4}/)) {
+                            input.style.borderColor = 'red';
+                            event.preventDefault();
+                        } else {
+                            input.style.borderColor = 'green';
+                        }
+                        break;
+                    case 'mail':
+                        if (!input.value.match(/^[a-zа-я0-9._-]+@[a-z0-9-_]+\.[a-z0-9-_]{2,4}/iu)) {
+                            input.style.borderColor = 'red';
+                            event.preventDefault();
+                        } else {
+                            input.style.borderColor = 'green';
+                        }
+                        break;
+                    case 'text':
+                        if (!input.value.match(/^.+/iu)) {
+                            input.style.borderColor = 'red';
+                            event.preventDefault();
+                        } else {
+                            input.style.borderColor = 'green';
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

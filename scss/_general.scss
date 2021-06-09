@@ -1,0 +1,27 @@
+body {
+    @include font(400, 16px, 19px);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.container {
+    max-width: 1138px;
+    margin: 0 auto;
+    width: 96%;
+    @include tablet {
+        width: 96%;
+    }
+
+    @include mobile {
+        width: 96%;
+    }
+}
