@@ -22,7 +22,7 @@ Vue.component('cart', {
         addProduct(item) {
             let find = this.cartItems.find(el => el.id_product === item.id_product);
             if (find) {
-                this.$parent.putJson(`/api/cart/${find.id_product}`, { quantity: 1 })
+                this.$parent.putJson(`/api/cart/${item.id_product}/${item.product_name}`, { quantity: 1 })
                     .then(data => {
                         if (data.result === 1) {
                             find.quantity++

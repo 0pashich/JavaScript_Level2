@@ -43,8 +43,8 @@ const app = new Vue({
                 })
         },
         delJson(url, data) {
-            console.log(url);
-            console.log(data);
+            //console.log(url);
+            // console.log(data);
             return fetch(url, {
                 method: 'DELETE',
                 headers: {
@@ -54,7 +54,7 @@ const app = new Vue({
             })
                 .then(result => result.json())
                 .catch(error => {
-                    console.log(error);
+                    //  console.log(error);
                     this.$refs.error.text = error;
                 })
         },
