@@ -1,0 +1,57 @@
+.copyright {
+    background-color: $gray-blue;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 79px;
+        @include mobile {
+            min-height: 143px;
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__text {
+        color: $dark-white;
+        padding: 0 0 0 5px;
+        @include mobile {
+            margin: 0 0 6px 0;
+        }
+    }
+
+    &__icon-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        @include mobile {
+            margin: 43px 0 0 0;
+        }
+    }
+
+    &__icon-link {
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin: 0 0 0 7px;
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__icon {
+        background-color: $white;
+        // margin: auto auto;
+        // margin: 0 0 0 5px;
+        // padding: 8px 8px;
+        fill: $black;
+    }
+    &__icon-link:hover {
+        background-color: $dark-pink;
+    }
+
+    &__icon-link:hover &__icon {
+        background-color: $dark-pink;
+        fill: $white;
+    }
+}

@@ -1,0 +1,183 @@
+.header {
+    background-color: $dark-blue;
+
+    z-index: 10;
+
+    &__navigation {
+        display: none;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 75px;
+    }
+
+    &__logo {
+        margin: 0 41px 0 0;
+        display: block;
+        transition: transform 0.3s;
+    }
+    &__logo:hover,
+    &__logo:focus {
+        transform: scale(1.2);
+    }
+
+    &__search {
+        &-form {
+        }
+        &-field {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid $white;
+            @include font(400, 18px, 14px);
+            color: $white;
+            outline: none;
+        }
+        &-btn {
+            transition: transform 0.3s;
+            background: transparent;
+            border: none;
+        }
+        &-btn:hover,
+        &-btn:focus {
+            transform: scale(1.2);
+        }
+    }
+    &__search:hover,
+    &__search:focus {
+    }
+
+    &__contents {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__profile {
+        margin: 0 33px 0 0;
+        display: block;
+        transition: transform 0.3s;
+    }
+
+    &__profile:hover,
+    &__profile:focus {
+        transform: scale(1.2);
+    }
+
+    &__cart {
+        position: relative;
+        display: block;
+        transition: transform 0.3s;
+        background: transparent;
+        border: none;
+    }
+    &__cart:hover,
+    &__cart:focus {
+        transform: scale(1.2);
+    }
+
+    &__cart-block {
+        width: 415px;
+        // height: 764px;
+        position: absolute;
+        right: 0px;
+        top: 75px;
+        background-color: $white;
+        box-shadow: -5px 5px 15px rgba(122, 122, 122, 0.3);
+        box-sizing: border-box;
+        padding: 20px;
+
+        transform: translateY(0px);
+        transition: transform 0.3s;
+        z-index: 10;
+
+        &__title {
+            @include font(700, 14px, 17px);
+            text-transform: uppercase;
+            padding: 0 0 0 1px;
+            margin: 0 0 24px;
+        }
+
+        &__subtitle-link {
+            @include font(400, 14px, 17px);
+            text-transform: uppercase;
+            color: $dark-pink;
+            text-decoration: none;
+        }
+
+        &__sublist {
+            margin: 12px 0 20px 22px;
+        }
+
+        &__subitem {
+            margin: 0 0 11px 0;
+        }
+
+        &__link {
+            @include font(400, 14px, 17px);
+            color: $dull-gray;
+            text-decoration: none;
+        }
+
+        &__close {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            border: none;
+            background-color: transparent;
+        }
+        &__close:active {
+        }
+    }
+
+    /*     .navigation:hover {
+        transform: translateY(875px);
+        transition: transform 0.3s;
+    } */
+
+    /*     &__cart:before {
+        content: "5";
+        width: 19px;
+        height: 19px;
+        //   background: lightblue;
+        position: absolute;
+        right: -5px;
+        bottom: 20px;
+        background-image: url(../img/circle.svg);
+        background-size: 19px 19px;
+        @include font(400, 12px, 14px);
+        color: $white;
+        padding: 3px 0 0 0;
+        text-align: center;
+        box-sizing: border-box;
+    } */
+
+    &__button {
+        background-color: transparent;
+        border: none;
+        margin: 0 33px 0 0;
+        min-height: 75px;
+
+        transition: transform 0.3s;
+    }
+
+    &__button:hover,
+    &__button:focus {
+        transform: scale(1.2);
+    }
+
+    /*     &__button:active ~ .navigation {
+        //display: none;
+        transform: translateY(-900px);
+        transition: transform 0.3s;
+    } */
+
+    &__button:active + .navigation,
+    &__button:focus + .navigation {
+        //display: block;
+        transform: translateY(875px);
+        transition: transform 0.3s;
+    }
+}

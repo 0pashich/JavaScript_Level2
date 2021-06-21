@@ -1,0 +1,102 @@
+.registration {
+    margin: 64px auto 96px;
+    display: flex;
+
+    &__form {
+    }
+
+    &__fieldset {
+    }
+
+    &__legend {
+        @include font(300, 16px, 19px); 
+        color: $dark-blue;
+    }
+
+    &__label {
+    }
+
+    &__input {
+        display: block;
+        width: 360px;
+        height: 45px;
+        margin: 21px 0 0;
+        border: 1px solid $silver;
+        padding: 0 0 0 17px;
+        @include font(300, 13px, 16px); 
+        color: $dark-blue;
+    }
+
+    &__input::placeholder {
+        color: $light-silver;
+    }
+
+    &__gender {
+        margin: 32px 0 33px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__radio-label {
+        display: block;
+        @include font(300, 11px, 13px);       
+        color: $black;
+        padding: 0 20px 0 10px;
+    }
+
+    &__note {
+        display: block;
+        width: 360px;
+        margin: 16px 0 39px;
+        @include font(300, 13px, 16px); 
+        color: $light-silver;
+    }
+
+    &__button {
+        height: 50px;
+        width: 167px;
+        background-color: $dark-pink;
+        @include font(400, 14px, 17px); 
+        color: $white;
+        border: none;
+        text-transform: uppercase;
+    }
+
+    &__arrow {
+        margin: 0 0 0 20px;
+    }
+
+    &__benefit {
+        padding: 0 0 0 129px;
+    }
+
+    &__title {
+        @include font(300, 24px, 29px); 
+        text-transform: uppercase;
+        margin: 0 0 22px;
+    }
+
+    &__text {
+        @include font(300, 24px, 29px); 
+        margin: 0 0 21px;
+    }
+
+    &__list {
+    }
+
+    &__item {
+        margin: 0 0 16px 43px;
+        @include font(300, 24px, 29px); 
+        position: relative;
+    }
+
+    &__item:before {
+        content: "";
+        background-image: url("../img/check.svg");
+        width: 20px;
+        height: 16px;
+        position: absolute;
+        left: -43px;
+        top: 8px;
+    }
+}

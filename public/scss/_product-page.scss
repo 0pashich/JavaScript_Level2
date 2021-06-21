@@ -1,0 +1,104 @@
+.carousel-item {
+    height: 777px;
+    background-color: $alabaster;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: $carousel-control-icon-background;
+}
+
+.carousel-control-prev-icon {
+    background-image: url('data:image/svg+xml,<svg width="13" height="23" viewBox="0 0 13 23"  xmlns="http://www.w3.org/2000/svg"><path d="M12.6998 3.7499L4.9498 11.4999L12.6998 19.2499L11.1498 22.3499L0.299805 11.4999L11.1498 0.649902L12.6998 3.7499Z" fill="black"/></svg>');
+}
+
+.carousel-control-next-icon {
+    background-image: url('data:image/svg+xml,<svg width="13" height="23" viewBox="0 0 13 23"  xmlns="http://www.w3.org/2000/svg"><path d="M0.299805 19.2499L8.0498 11.4999L0.299805 3.7499L1.8498 0.649902L12.6998 11.4999L1.8498 22.3499L0.299805 19.2499Z" fill="F16D7F"/></svg>');
+}
+
+.carousel-control-prev {
+    justify-content: flex-start;
+}
+
+.carousel-control-next {
+    justify-content: flex-end;
+}
+
+.description {
+    position: relative;
+    margin: -65px auto 130px;
+    z-index: 10;
+    background-color: $white;
+    padding: 0;
+}
+
+.product-category {
+    @include font(300, 14px, 17px);
+    color: $dark-pink;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 65px auto 12px;
+}
+
+.separator {
+    width: 63px;
+    height: 3px;
+    background: $froly;
+}
+.product-name {
+    @include font(300, 18px, 22px);
+    color: $tundora;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 12px auto 48px;
+}
+
+.product-description {
+    @include font(300, 14px, 17px);
+    text-align: center;
+    color: $scorpion;
+    width: 555px;
+}
+
+.product-price {
+    @include font(300, 24px, 29px);
+    color: $froly;
+    text-align: center;
+    margin: 32px auto 0;
+}
+
+.line {
+    width: 641px;
+    height: 1px;
+    background-color: $smoke-white-border;
+    margin: 65px auto 65px;
+}
+
+.form-select {
+    border: none;
+    @include font(400, 14px, 17px);
+    color: $dull-gray;
+    text-transform: uppercase;
+}
+
+.product-button {
+    width: 211px;
+    height: 47px;
+    border: 1px solid $bittersweet;
+    background-color: transparent;
+    @include font(400, 14px, 24px);
+    color: $froly;
+    padding: 0;
+    margin: 48px auto 65px;
+}
+
+.product-button-image {
+    width: 26px;
+    height: 24px;
+    fill: $froly;
+    margin: 0 23px 0 0;
+}
+
+.mb-128 {
+    margin-bottom: 128px;
+}

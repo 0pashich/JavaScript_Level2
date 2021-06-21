@@ -1,0 +1,137 @@
+.products {
+    &__headline {
+        @include font(400, 30px, 36px);
+        color: $dark-blue;
+        margin: 0 0 6px;
+        text-align: center;
+    }
+
+    &__slogan {
+        @include font(400, 14px, 17px);
+        color: $grey;
+        margin: 0 0 48px;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include container {
+            justify-content: space-evenly;
+        }
+    }
+
+    &__item {
+        width: 360px;
+        min-height: 581px;
+        background-color: $light-gray;
+        margin: 0 0 30px;
+        @include container {
+            margin: 0 0 17px 0;
+        }
+    }
+    &__item:nth-child(odd) {
+        @include container {
+            margin: 0 16px 17px 0;
+        }
+        @include mobile {
+            margin: 0 0 17px 0;
+        }
+    }
+
+    &__image {
+    }
+
+    &__wrapper-overlay {
+        position: relative;
+    }
+
+    &__wrapper-overlay:before {
+        content: "";
+        width: 100%;
+        min-height: 420px;
+        background: rgba(58, 56, 56, 0.86);
+        position: absolute;
+        top: 0;
+    }
+
+    &__wrapper-overlay:before {
+        display: none;
+    }
+
+    &__item:hover &__wrapper-overlay:before {
+        display: block;
+    }
+
+    &__button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 138px;
+        height: 43px;
+        border: 1px solid $white;
+        background-color: transparent;
+        @include font(400, 14px, 24px);
+        color: $white;
+        background-image: url(../img/cart.svg);
+        background-size: 26px 24px;
+        background-repeat: no-repeat;
+        background-position: 13px center;
+        padding: 0 0 0 37px;
+        transition: border 0.3s;
+    }
+
+    &__button:hover,
+    &__button:focus {
+        border: 1px solid $dark-pink;
+    }
+
+    &__button {
+        display: none;
+    }
+
+    &__item:hover &__button {
+        display: block;
+    }
+
+    &__title {
+        @include font(400, 13px, 16px);
+        text-transform: uppercase;
+        color: $black;
+        padding: 25px 18px 0;
+    }
+
+    &__description {
+        @include font(300, 14px, 17px);
+        color: $dark-grey;
+        padding: 13px 28px 0 17px;
+    }
+
+    &__price {
+        color: $dark-pink;
+        padding: 18px 18px 20px;
+    }
+
+    &__button-all {
+        display: block;
+        margin: 18px auto 95px;
+        width: 211px;
+        height: 47px;
+        border: 1px solid $dark-pink;
+        background-color: transparent;
+        color: $deep-pink;
+        @include font(400, 16px, 19px);
+        text-align: center;
+        transition: background-color 0.5s;
+        transition: color 0.5s;
+    }
+
+    &__button-all:hover {
+        background-color: $dark-pink;
+        border: 1px solid $bittersweet;
+        color: $white;
+    }
+}

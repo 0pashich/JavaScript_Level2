@@ -1,0 +1,172 @@
+.cart {
+    &__wrapper {
+        display: flex;
+        margin: 96px 0 128px;
+        justify-content: space-between;
+    }
+
+    &__box {
+    }
+    &__list {
+        margin: 0 0 72px;
+    }
+    &__item {
+        width: 375px;
+        // height: 306px;
+        box-shadow: 5px 5px 5px $shadow;
+        margin: 0 auto 10px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__image {
+    }
+    &__text {
+        padding: 10px;
+        width: 100%;
+        display: grid;
+    }
+    &__final {
+        padding: 10px;
+        margin: auto 0 0 auto;
+    }
+    &__btn-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__del-btn {
+        display: block;
+        width: 36px;
+        height: 36px;
+        border: 1px solid $dark-pink;
+        background-color: transparent;
+        color: $deep-pink;
+        @include font(400, 16px, 19px);
+        text-align: center;
+        transition: background-color 0.5s;
+        transition: color 0.5s;
+    }
+    &__del-btn:hover {
+        background-color: $dark-pink;
+        border: 1px solid $bittersweet;
+        color: $white;
+    }
+
+    &__title {
+        margin: 0 0 10px 0;
+        @include font(400, 24px, 29px);
+        color: $gray-blue;
+        text-transform: uppercase;
+    }
+    &__label {
+        @include font(400, 16px, 18px);
+        color: $wet-asphalt;
+        margin: auto 0 0;
+    }
+    &__price {
+        @include font(400, 16px, 18px);
+        color: $dark-pink;
+    }
+    &__color {
+    }
+    &__size {
+    }
+    &__quantity {
+        width: 43px;
+        height: 24px;
+        margin: 0 0 0 24px;
+        border: 1px solid $smoke-white-border;
+        @include font(400, 18px, 22px);
+        color: $dull-gray;
+        text-align: center;
+    }
+    &__manage-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__manage-button {
+        @include font(300, 14px, 17px);
+        color: $black;
+        min-height: 49px;
+        padding: 0 40px 0;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 1px solid $white-aluminum;
+    }
+    &__fieldset {
+        width: 360px;
+    }
+    &__legend {
+        @include font(300, 16px, 19px);
+        color: $dark-blue;
+        text-transform: uppercase;
+        margin: 7px 0 20px;
+    }
+    &__input {
+        display: block;
+        border: 1px solid $white-aluminum;
+        height: 44px;
+        width: 359px;
+        padding: 0 0 0 16px;
+        color: $light-silver;
+        margin: 0 0 21px;
+        box-sizing: border-box;
+    }
+    &__quote {
+        margin: 3px 0 56px;
+        height: 34px;
+        width: 100px;
+        border-radius: 0px;
+        border: 1px solid $white-aluminum;
+        background-color: transparent;
+        text-transform: uppercase;
+        @include font(300, 11px, 13px);
+        color: $white-aluminum;
+    }
+
+    &__checkout {
+        height: 214px;
+        width: 360px;
+        border-radius: 0px;
+        background: $smoke-white-background;
+    }
+    &__subtotal {
+        margin: 39px 34px 0 0;
+        @include font(400, 11px, 13px);
+        color: $white-aluminum;
+        text-transform: uppercase;
+        text-align: right;
+    }
+    &__subtotal-price {
+        margin: 0 0 0 10px;
+    }
+    &__total {
+        margin: 12px 37px 0 0;
+        @include font(400, 16px, 19px);
+        color: $white-aluminum;
+        text-transform: uppercase;
+        text-align: right;
+    }
+    &__total-price {
+        margin: 0 0 0 10px;
+        color: $dark-pink;
+        @include font(700, 16px, 19px);
+    }
+    &__line {
+        width: 275px;
+        height: 1px;
+        background: $smoke-gray-line;
+        margin: 21px auto 17px;
+    }
+    &__button-checkout {
+        display: block;
+        height: 50px;
+        width: 273px;
+        background-color: $dark-pink;
+        @include font(300, 16px, 19px);
+        color: $white;
+        border: none;
+        text-transform: uppercase;
+        margin: 0 auto 0;
+    }
+}

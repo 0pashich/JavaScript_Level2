@@ -1,0 +1,50 @@
+.headline {
+    background-color: $light-pink;
+    min-height: 148px;
+    display: flex;
+    align-items: center;
+    @include mobile {
+        flex-direction: column;
+    }
+
+    &__wrapper {
+        height: 100%;
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        @include font(400, 24px, 29px);
+        color: $dark-pink;
+        text-transform: uppercase;
+        @include mobile {
+            margin: 24px 0 0 0;
+        }
+    }
+    &__breadcrumbs {
+        &-link {
+            @include font(300, 14px, 17px);
+            color: $dove-gray;
+            text-transform: uppercase;
+            text-decoration: none;
+            &--active {
+                @include font(700, 14px, 17px);
+                color: $dark-pink;
+            }
+        }
+
+        &-slash {
+            @include font(300, 14px, 17px);
+            color: $dove-gray;
+            text-transform: uppercase;
+        }
+        @include mobile {
+            margin: 0 0 46px 0;
+        }
+    }
+}

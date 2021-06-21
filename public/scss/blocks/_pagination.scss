@@ -1,0 +1,37 @@
+.pagination {
+    width: 283px;
+    height: 43px;
+    margin: 48px auto 96px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    border: 1px solid $gallery;
+    border-radius: 4px;
+}
+.pagination__icon {
+    margin: 13px 15px 15px 15px;
+}
+.pagination__icon--prev {
+}
+
+.pagination__link {
+    display: block;
+    margin: auto;
+    text-decoration: none;
+    @include font(300, 16px, 19px);
+    color: $grey;
+}
+
+.pagination__link--active {
+    color: $froly;
+}
+
+.pagination__dots {
+    display: block;
+    margin: auto 0;
+    @include font(300, 16px, 19px);
+    color: $grey;
+}
+
+.pagination__icon--next {
+}

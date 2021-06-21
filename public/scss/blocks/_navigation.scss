@@ -1,0 +1,58 @@
+.navigation {
+    width: 232px;
+    height: 764px;
+    position: absolute;
+    right: 0px;
+    top: -800px;
+    background-color: $white;
+    box-shadow: -5px 5px 15px rgba(122, 122, 122, 0.3);
+    box-sizing: border-box;
+    padding: 37px 0 0 33px;
+
+    transform: translateY(0px);
+    transition: transform 0.3s;
+    z-index: 10;
+
+    &__title {
+        @include font(700, 14px, 17px);
+        text-transform: uppercase;
+        padding: 0 0 0 1px;
+        margin: 0 0 24px;
+    }
+
+    &__subtitle-link {
+        @include font(400, 14px, 17px);
+        text-transform: uppercase;
+        color: $dark-pink;
+        text-decoration: none;
+    }
+
+    &__sublist {
+        margin: 12px 0 20px 22px;
+    }
+
+    &__subitem {
+        margin: 0 0 11px 0;
+    }
+
+    &__link {
+        @include font(400, 14px, 17px);
+        color: $dull-gray;
+        text-decoration: none;
+    }
+
+    &__close {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        border: none;
+        background-color: transparent;
+    }
+    &__close:active {
+    }
+}
+
+.navigation:hover {
+    transform: translateY(875px);
+    transition: transform 0.3s;
+}
